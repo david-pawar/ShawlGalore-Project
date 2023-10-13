@@ -123,3 +123,8 @@ everything is working well, I am able to see the table and data
 0717 so far everything is going on smooth thanks  too my previous experience and detailed tutorial.
 
 created a new class ShawlOccasionViewModel in Models folder and added code
+
+0732 got error in searching, web page is not showing
+
+0736 in view/Shawls/Index on line 11 
+error = did not edited the code copied from tutorial
