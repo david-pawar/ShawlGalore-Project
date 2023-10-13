@@ -2,11 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using ShawlGalore.Data;
 using System;
-using System.Linq;
+using System.Linq;           //using statement for this file
 
 namespace ShawlGalore.Models
 {
-    public static class SeedData
+    public static class SeedData          //class name
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
@@ -14,17 +14,24 @@ namespace ShawlGalore.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<ShawlGaloreContext>>()))
             {
-                // Look for any movies.
+                // We're initializing a database context using a provided service provider.
+                // The context will be responsible for managing interactions with the database.
+
+                // Now, we're checking if there are any existing records in the 'Shawl' table.
+                // when I recreated the app but previous data was there, i could not seed data in, because there was already data existed
                 if (context.Shawl.Any())
                 {
-                    return;   // DB has been seeded
+                    return;    // If there are existing records, we don't need to seed the database.
                 }
 
+                // If there are no existing records, we proceed to add new records to the 'Shawl' table.
 
-                context.Shawl.AddRange(
+
+
+                context.Shawl.AddRange( // now, instances of the Shawl class will be created
                   new Shawl
-                  {
-                      // Image = "../wwwroot/img/blue-silk2.avif",
+                  {  // these instance should have the all values corresponding to the Shawl.cs class 's properties
+
                       Material = "Silk",
                       Color = "Blue",
                       Design = "Printed",
@@ -33,7 +40,7 @@ namespace ShawlGalore.Models
                       Price = 45.99M
                   },
 
-                        new Shawl
+                        new Shawl   // a shawl instance is created with help of new keyword
                         {
                             // Image = "../wwwroot/img/black-shawl.webp",
                             Material = "Wool",
@@ -169,6 +176,7 @@ namespace ShawlGalore.Models
                     }
                 );
                 context.SaveChanges();
+                // At this point, we save the changes made to the 'Shawl' objects and persist them in the database.
             }
         }
     }
