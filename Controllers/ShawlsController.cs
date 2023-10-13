@@ -79,7 +79,7 @@ namespace ShawlGalore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Image,Material,Color,Design,Occasion,Size,Price")] Shawl shawl)
+        public async Task<IActionResult> Create([Bind("Id,Image,Material,Color,Design,Occasion,Size,Review,Price")] Shawl shawl)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,7 @@ namespace ShawlGalore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Image,Material,Color,Design,Occasion,Size,Price")] Shawl shawl)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Image,Material,Color,Design,Occasion,Size,Review,Price")] Shawl shawl)
         {
             if (id != shawl.Id)
             {

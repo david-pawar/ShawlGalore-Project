@@ -31,6 +31,7 @@ namespace ShawlGalore.Models
         public string Size { get; set; }
 
 
+
         [Column(TypeName = "decimal(18, 2)")]
         [Range(1, 100)]
         [DataType(DataType.Currency)]

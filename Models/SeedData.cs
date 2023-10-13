@@ -41,6 +41,7 @@ namespace ShawlGalore.Models
                             Design = "Plain",
                             Occasion = "Everyday",
                             Size = "Small",
+
                             Price = 30.99M
                         },
 
@@ -52,36 +53,40 @@ namespace ShawlGalore.Models
                             Design = "Beaded",
                             Occasion = "Wedding",
                             Size = "Medium",
+
                             Price = 80.99M
                         },
                         new Shawl
                         {
-                            //   Image = "../wwwroot/img/red-silk.webp",
+
                             Material = "Silk",
                             Color = "Red",
                             Design = "Floral",
                             Occasion = "Formal",
                             Size = "Large",
+
                             Price = 49.99M
                         },
                     new Shawl
                     {
-                        //  Image = "../wwwroot/img/cashmere-blue.jpg",
+
                         Material = "Cashmere",
                         Color = "Blue",
                         Design = "Striped",
                         Occasion = "Casual",
                         Size = "Medium",
+
                         Price = 39.99M
                     },
                     new Shawl
                     {
-                        //   Image = "../wwwroot/img/green-wool.webp",
+
                         Material = "Wool",
                         Color = "Green",
                         Design = "Geometric",
                         Occasion = "Casual",
                         Size = "Small",
+
                         Price = 29.99M
                     },
                     new Shawl
@@ -91,17 +96,19 @@ namespace ShawlGalore.Models
                         Design = "Plain",
                         Occasion = "Everyday",
                         Size = "Large",
+
                         Price = 34.99M
                     },
 
                     new Shawl
                     {
-                        // Image = "../wwwroot/img/cashmere-pink.jpg",
+
                         Material = "Cashmere",
                         Color = "Pink",
                         Design = "Printed",
                         Occasion = "Casual",
                         Size = "Large",
+
                         Price = 42.99M
                     },
                     new Shawl
@@ -112,16 +119,18 @@ namespace ShawlGalore.Models
                         Design = "Plaid",
                         Occasion = "Casual",
                         Size = "Small",
+
                         Price = 31.99M
                     },
                     new Shawl
                     {
-                        //   Image = "../wwwroot/img/white-cotton.webp",
+
                         Material = "Cotton",
                         Color = "White",
                         Design = "Striped",
                         Occasion = "Everyday",
                         Size = "Medium",
+
                         Price = 36.99M
                     },
 
@@ -133,26 +142,29 @@ namespace ShawlGalore.Models
                         Design = "Embroidered",
                         Occasion = "Formal",
                         Size = "Medium",
+
                         Price = 57.99M
                     },
                     new Shawl
                     {
-                        //   Image = "../wwwroot/img/yellow-cotton.jpg",
+
                         Material = "Cotton",
                         Color = "Yellow",
                         Design = "Plain",
                         Occasion = "Everyday",
                         Size = "Small",
+
                         Price = 28.99M
                     },
                     new Shawl
                     {
-                        // Image = "../wwwroot/img/gray-wool.jpg",
+
                         Material = "Wool",
                         Color = "Gray",
                         Design = "Plaid",
                         Occasion = "Casual",
                         Size = "Medium",
+
                         Price = 32.99M
                     }
                 );
