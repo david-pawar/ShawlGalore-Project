@@ -117,3 +117,6 @@ Error	CS0116	A namespace cannot directly contain members such as fields or metho
      at the end
 
 everything is working well, I am able to see the table and data 
+
+0701 new added data is not getting added because according to the code if there is any single entry, then dont add new entry, so gonna delete all entries than gonna reenter
+0714 added search function in the web app

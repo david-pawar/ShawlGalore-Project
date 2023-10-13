@@ -20,9 +20,17 @@ namespace ShawlGalore.Controllers
         }
 
         // GET: Shawls
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Shawl.ToListAsync());
+            var shawls = from m in _context.Shawl
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                shawls = shawls.Where(s => s.Material.Contains(searchString));
+            }
+
+            return View(await shawls.ToListAsync());
         }
 
         // GET: Shawls/Details/5
