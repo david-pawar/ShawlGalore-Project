@@ -116,4 +116,4 @@ Error	CS0116	A namespace cannot directly contain members such as fields or metho
 0650 i did added image property, but with error i realised I cant add new here, can add but have to delete or change database, so i will add that property
      at the end
 
-everything is working well, I am able to see the table and data
+everything is working well, I am able to see the table and data 
