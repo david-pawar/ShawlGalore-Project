@@ -20,9 +20,11 @@ namespace ShawlGalore.Models
                     return;   // DB has been seeded
                 }
 
+
                 context.Shawl.AddRange(
                   new Shawl
                   {
+                      // Image = "../wwwroot/img/blue-silk2.avif",
                       Material = "Silk",
                       Color = "Blue",
                       Design = "Printed",
@@ -33,6 +35,7 @@ namespace ShawlGalore.Models
 
                         new Shawl
                         {
+                            // Image = "../wwwroot/img/black-shawl.webp",
                             Material = "Wool",
                             Color = "Black",
                             Design = "Plain",
@@ -43,6 +46,7 @@ namespace ShawlGalore.Models
 
                         new Shawl
                         {
+                            // Image = "../wwwroot/img/white-pashima.webp",
                             Material = "Pashmina",
                             Color = "White",
                             Design = "Beaded",
@@ -52,6 +56,7 @@ namespace ShawlGalore.Models
                         },
                         new Shawl
                         {
+                            //   Image = "../wwwroot/img/red-silk.webp",
                             Material = "Silk",
                             Color = "Red",
                             Design = "Floral",
@@ -61,6 +66,7 @@ namespace ShawlGalore.Models
                         },
                     new Shawl
                     {
+                        //  Image = "../wwwroot/img/cashmere-blue.jpg",
                         Material = "Cashmere",
                         Color = "Blue",
                         Design = "Striped",
@@ -70,6 +76,7 @@ namespace ShawlGalore.Models
                     },
                     new Shawl
                     {
+                        //   Image = "../wwwroot/img/green-wool.webp",
                         Material = "Wool",
                         Color = "Green",
                         Design = "Geometric",
@@ -86,17 +93,10 @@ namespace ShawlGalore.Models
                         Size = "Large",
                         Price = 34.99M
                     },
+
                     new Shawl
                     {
-                        Material = "Silk",
-                        Color = "Gold",
-                        Design = "Embroidered",
-                        Occasion = "Formal",
-                        Size = "Medium",
-                        Price = 59.99M
-                    },
-                    new Shawl
-                    {
+                        // Image = "../wwwroot/img/cashmere-pink.jpg",
                         Material = "Cashmere",
                         Color = "Pink",
                         Design = "Printed",
@@ -106,6 +106,7 @@ namespace ShawlGalore.Models
                     },
                     new Shawl
                     {
+                        // Image = "../wwwroot/img/purple-wool.jpg",
                         Material = "Wool",
                         Color = "Purple",
                         Design = "Plaid",
@@ -115,6 +116,7 @@ namespace ShawlGalore.Models
                     },
                     new Shawl
                     {
+                        //   Image = "../wwwroot/img/white-cotton.webp",
                         Material = "Cotton",
                         Color = "White",
                         Design = "Striped",
@@ -122,17 +124,10 @@ namespace ShawlGalore.Models
                         Size = "Medium",
                         Price = 36.99M
                     },
+
                     new Shawl
                     {
-                        Material = "Silk",
-                        Color = "Blue",
-                        Design = "Floral",
-                        Occasion = "Formal",
-                        Size = "Large",
-                        Price = 49.99M
-                    },
-                    new Shawl
-                    {
+                        //   Image = "../wwwroot/img/red-cashmere.webp",
                         Material = "Cashmere",
                         Color = "Red",
                         Design = "Embroidered",
@@ -142,6 +137,7 @@ namespace ShawlGalore.Models
                     },
                     new Shawl
                     {
+                        //   Image = "../wwwroot/img/yellow-cotton.jpg",
                         Material = "Cotton",
                         Color = "Yellow",
                         Design = "Plain",
@@ -151,6 +147,7 @@ namespace ShawlGalore.Models
                     },
                     new Shawl
                     {
+                        // Image = "../wwwroot/img/gray-wool.jpg",
                         Material = "Wool",
                         Color = "Gray",
                         Design = "Plaid",

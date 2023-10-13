@@ -13,7 +13,7 @@
         <select asp-for="ShawlOccasion" asp-items="Model.Occasions">
             <option value="">All</option>
         </select>
-        Title: <input type="text" asp-for="SearchString" />
+        Material: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -22,6 +22,7 @@
         <tr>
 
             <th>
+
                 @Html.DisplayNameFor(model => model.Shawls[0].Material)
             </th>
             <th>
@@ -48,6 +49,7 @@
             <tr>
 
                 <td>
+
                     @Html.DisplayFor(modelItem => item.Material)
                 </td>
                 <td>
