@@ -20,17 +20,34 @@ namespace ShawlGalore.Controllers
         }
 
         // GET: Shawls
-        public async Task<IActionResult> Index(string searchString)
+        // GET: Movies
+        public async Task<IActionResult> Index(string shawlOccasion, string searchString)
         {
+            // Use LINQ to get list of genres.
+            IQueryable<string> occasionQuery = from m in _context.Shawl
+                                               orderby m.Occasion
+                                               select m.Occasion;
+
             var shawls = from m in _context.Shawl
                          select m;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
                 shawls = shawls.Where(s => s.Material.Contains(searchString));
             }
 
-            return View(await shawls.ToListAsync());
+            if (!string.IsNullOrEmpty(shawlOccasion))
+            {
+                shawls = shawls.Where(x => x.Occasion == shawlOccasion);
+            }
+
+            var shawlOccasionVM = new ShawlOccasionViewModel
+            {
+                Occasions = new SelectList(await occasionQuery.Distinct().ToListAsync()),
+                Shawls = await shawls.ToListAsync()
+            };
+
+            return View(shawlOccasionVM);
         }
 
         // GET: Shawls/Details/5

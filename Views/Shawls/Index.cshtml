@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ShawlGalore.Models.Shawl>
-
+﻿@model ShawlGalore.Models.ShawlOccasionViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,7 +10,10 @@
 </p>
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
-        Title: <input type="text" name="SearchString" />
+        <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -20,28 +22,28 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Material)
+                @Html.DisplayNameFor(model => model.Shawls[0].Material)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Color)
+                @Html.DisplayNameFor(model => model.Shawls[0].Color)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Design)
+                @Html.DisplayNameFor(model => model.Shawls[0].Design)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Occasion)
+                @Html.DisplayNameFor(model => model.Shawls[0].Occasion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Size)
+                @Html.DisplayNameFor(model => model.Shawls[0].Size)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Shawls[0].Price)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Shawls)
         {
             <tr>
 

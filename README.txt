@@ -120,3 +120,6 @@ everything is working well, I am able to see the table and data
 
 0701 new added data is not getting added because according to the code if there is any single entry, then dont add new entry, so gonna delete all entries than gonna reenter
 0714 added search function in the web app
+0717 so far everything is going on smooth thanks  too my previous experience and detailed tutorial.
+
+created a new class ShawlOccasionViewModel in Models folder and added code
