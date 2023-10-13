@@ -129,5 +129,6 @@ created a new class ShawlOccasionViewModel in Models folder and added code
 0736 in view/Shawls/Index on line 11 
 error = did not edited the code copied from tutorial
 
+1355 followed steps as it was instructed in the tutorial, got no error so far, 
 
-
+1427 i deployed on Azure, 

@@ -22,11 +22,15 @@ namespace ShawlGalore
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // Configuring services for the application.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Adding support for controllers and views.
             services.AddControllersWithViews();
 
+            // Adding the ShawlGaloreContext to the application's services, configuring it to use SQL Server
+            // and specifying the connection string from the configuration. the first project I delete, I did not change
+            // the movie context name to shawl galore, and got error after,,
             services.AddDbContext<ShawlGaloreContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ShawlGaloreContext")));
         }
